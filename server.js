@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 // ======================
 // MongoDB Connection
 // ======================
-mongoose.connect('mongodb://localhost:27017/studentManagement', {
+mongoose.connect('mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
