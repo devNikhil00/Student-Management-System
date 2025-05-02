@@ -2,7 +2,7 @@
 // Fetch and display students
 async function fetchStudents() {
     try {
-      const response = await fetch('http://localhost:3000/api/students');
+      const response = await fetch('mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0');
       const data = await response.json();
   
       if (!data.success) {
@@ -130,7 +130,7 @@ async function fetchStudents() {
     };
   
     try {
-      const response = await fetch('http://localhost:3000/api/students', {
+      const response = await fetch('mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(studentData)
@@ -160,7 +160,7 @@ async function fetchStudents() {
         didOpen: () => Swal.showLoading()
       });
   
-      const response = await fetch(`http://localhost:3000/api/students/${studentId}`);
+      const response = await fetch(`mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0/${studentId}`);
       const data = await response.json();
   
       Swal.close();
@@ -329,7 +329,7 @@ async function fetchStudents() {
         });
   
         try {
-          const updateResponse = await fetch(`http://localhost:3000/api/students/${studentId}`, {
+          const updateResponse = await fetch(`mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${studentId}`, {
             method: 'PUT',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formValues)
@@ -368,7 +368,7 @@ async function fetchStudents() {
   
     if (confirmDelete.isConfirmed) {
       try {
-        const response = await fetch(`http://localhost:3000/api/students/${studentId}`, {
+        const response = await fetch(`mongodb+srv://<nikhil9889>:<988986>@cluster0.4tpf5.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0${studentId}`, {
           method: 'DELETE'
         });
   
